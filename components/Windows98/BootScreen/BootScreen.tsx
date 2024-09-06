@@ -12,14 +12,14 @@ export default function BootScreen() {
       />
 
       <Image
-        src="/assets/mobile.jpg"
+        src="/assets/mobile.webp"
         alt="Windows 98 Logo"
         layout="fill"
         objectFit="cover"
         className="block sm:hidden"
       />
 
-      <div className="absolute w-full h-3 overflow-hidden z-10 bottom-0">
+      <div className="absolute bottom-0 w-full h-3 overflow-hidden z-20">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-300 to-transparent animate-loading"></div>
       </div>
     </div>
