@@ -1,0 +1,11 @@
+{
+  "name": "fuul-sdk",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.4"
+  }
+}
