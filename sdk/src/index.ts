@@ -1,4 +1,5 @@
-import { ProjectInfo } from "./types/ProjectInfo";
 import { Fuul } from "./Fuul";
+import { ProjectInfo } from "./types/ProjectInfo";
 
-export { Fuul, ProjectInfo };
+export { Fuul };
+export type { ProjectInfo };

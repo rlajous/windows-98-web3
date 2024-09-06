@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cd sdk && pnpm install && pnpm build && cd .. && next build",
     "start": "next start",
     "lint": "next lint",
-    "build:sdk": "cd sdk && pnpm i && pnpm run build"
+    "setup": "./scripts/setup.sh"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",

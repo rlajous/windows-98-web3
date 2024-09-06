@@ -25,7 +25,7 @@ export const StartMenu: React.FC<{
         key={item.title}
         className="w-full text-left hover:bg-[#000080] hover:text-white p-1 flex items-center"
         onClick={() =>
-          onOpenWindow((id, onClose) => ({
+          onOpenWindow(() => ({
             title: item.title,
             component: item.content,
           }))
