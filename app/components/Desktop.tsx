@@ -33,7 +33,7 @@ export function Desktop(): JSX.Element {
 
   return (
     <div
-      className="min-h-screen bg-[#008080] text-black font-sans flex flex-col"
+      className=" h-svh bg-[#008080] text-black font-sans flex flex-col"
       onMouseMove={onDrag}
       onMouseUp={stopDrag}
       onClick={handleGlobalClick}
