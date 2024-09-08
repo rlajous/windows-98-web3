@@ -52,9 +52,7 @@ export const NFTMinter = () => {
 
   return (
     <div className="flex flex-col h-[80vh] bg-[#c0c0c0] p-4">
-      {/* Header and Connect button */}
       <div className="flex flex-col md:flex-row md:justify-between mb-4">
-        {/* Responsive title */}
         <h1 className="text-xl md:text-2xl font-bold text-left md:text-center">
           Windows 98 NFT Collection
         </h1>
@@ -63,7 +61,6 @@ export const NFTMinter = () => {
         </div>
       </div>
 
-      {/* NFT List, scrollable on mobile */}
       <div className="flex-1 overflow-y-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {nfts.map((nft: NFT) => (
