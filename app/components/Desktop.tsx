@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Footer } from "./Footer";
-import { StartMenu } from "./StartMenu";
+
 import {
   W98Window,
   W98WindowComponent,
 } from "@/components/Windows98/W98WindowComponent";
 import { useWindowsContext } from "@/providers/WindowsProvider";
+
+import { Footer } from "./Footer";
+import { StartMenu } from "./StartMenu";
 
 export function Desktop(): JSX.Element {
   const [showStartMenu, setShowStartMenu] = useState<boolean>(false);

@@ -6,17 +6,14 @@ import { useAccount } from "wagmi";
 import { ConnectWallet } from "@/components/ConnectWallet/ConnectWallet";
 import { ErrorWindow } from "@/components/Windows98/Errors/ErrorWindow";
 import { Windows98Error } from "@/components/Windows98/Errors/Windows98Error";
-import { NFTCard } from "../NftCard";
-import { ReferralWindow } from "./ReferalWindow";
-
+import { useNFTMinting } from "@/hooks/useNFTMinting/useNFTMinting";
 import { useFuul } from "@/providers/FuulProvider";
 import { useWindowsContext } from "@/providers/WindowsProvider";
-
-import { useNFTMinting } from "@/hooks/useNFTMinting/useNFTMinting";
-
 import { getNFTs } from "@/services/nfts";
-
 import { NFT } from "@/types/NFT";
+
+import { ReferralWindow } from "./ReferalWindow";
+import { NFTCard } from "../NftCard";
 
 export const NFTMinter = () => {
   const { openWindow } = useWindowsContext();

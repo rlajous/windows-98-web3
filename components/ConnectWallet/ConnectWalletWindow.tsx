@@ -1,7 +1,8 @@
 "use client";
-import { Connector, useConnect } from "wagmi";
-import { Windows98Button } from "../Windows98/Windows98Button";
 import { useEffect } from "react";
+import { Connector, useConnect } from "wagmi";
+
+import { Windows98Button } from "../Windows98/Windows98Button";
 
 const ConnectWalletW98WindowComponent = ({
   onClose,

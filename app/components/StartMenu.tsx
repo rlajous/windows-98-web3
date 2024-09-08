@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+
 import { NFTMinter } from "./windows/NFTMinter";
 
 const items = [

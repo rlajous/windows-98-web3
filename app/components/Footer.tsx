@@ -1,7 +1,8 @@
 "use client";
-import { Windows98Button } from "@/components/Windows98/Windows98Button";
-import Image from "next/image";
 import { Volume2 } from "lucide-react";
+import Image from "next/image";
+
+import { Windows98Button } from "@/components/Windows98/Windows98Button";
 
 interface FooterProps {
   showStartMenu: boolean;

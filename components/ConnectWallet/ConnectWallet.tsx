@@ -1,8 +1,8 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import React from "react";
 import { useAccount, useDisconnect, useEnsName } from "wagmi";
-import { ChevronDown } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -10,11 +10,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-import { Windows98Button } from "../Windows98/Windows98Button";
 import { truncateEthereumWallet } from "@/lib/utils";
-import { ConnectWalletWindow } from "./ConnectWalletWindow";
 import { useWindowsContext } from "@/providers/WindowsProvider";
+
+import { ConnectWalletWindow } from "./ConnectWalletWindow";
+import { Windows98Button } from "../Windows98/Windows98Button";
+
 
 export const ConnectWallet = () => {
   const { address, isConnected } = useAccount();

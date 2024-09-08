@@ -1,6 +1,7 @@
+import Image from "next/image";
+
 import { Windows98Button } from "@/components/Windows98/Windows98Button";
 import { NFT } from "@/types/NFT";
-import Image from "next/image";
 
 export const NFTCard: React.FC<{
   nft: NFT;

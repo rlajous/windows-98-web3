@@ -1,5 +1,6 @@
-import { Windows98Button } from "@/components/Windows98/Windows98Button";
 import Image from "next/image";
+
+import { Windows98Button } from "@/components/Windows98/Windows98Button";
 
 export const ErrorWindow =
   (title: string, errorMessage: string) =>

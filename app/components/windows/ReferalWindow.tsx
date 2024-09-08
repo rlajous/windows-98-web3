@@ -1,6 +1,7 @@
-import { Windows98Button } from "@/components/Windows98/Windows98Button";
 import { ProjectInfo } from "fuul-sdk";
 import { Copy } from "lucide-react";
+
+import { Windows98Button } from "@/components/Windows98/Windows98Button";
 
 export const ReferralWindow =
   (referralLink: string, projectInfo: ProjectInfo) =>
