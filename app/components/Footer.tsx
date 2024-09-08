@@ -1,6 +1,7 @@
 "use client";
 import { Volume2 } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import { Windows98Button } from "@/components/Windows98/Windows98Button";
 
@@ -10,13 +11,25 @@ interface FooterProps {
 }
 
 export const Footer = ({ showStartMenu, setShowStartMenu }: FooterProps) => {
-  const currentTime = new Date();
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const now = new Date();
+    const timeUntilNextMinute =
+      60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+
+    const timeout = setTimeout(() => {
+      setCurrentTime(new Date());
+    }, timeUntilNextMinute);
+
+    return () => clearTimeout(timeout);
+  }, [currentTime]);
 
   return (
     <div className="bg-[#c0c0c0] border-t-2 border-white flex justify-between items-center p-1 h-8">
       <Windows98Button
         onClick={(e) => {
-          e.stopPropagation(); // Stop global click event
+          e.stopPropagation();
           setShowStartMenu(!showStartMenu);
         }}
         className="flex items-center h-full px-[6px]"
