@@ -1,5 +1,6 @@
-import { W98Window } from "@/components/Windows98/W98WindowComponent";
 import { useState } from "react";
+
+import { W98Window } from "@/components/Windows98/W98WindowComponent";
 
 export const useWindows = () => {
   const [zIndexCounter, setZIndexCounter] = useState(1);
@@ -24,8 +25,8 @@ export const useWindows = () => {
       title,
       content,
       position: {
-        x: 50 + activeWindows.length * 20,
-        y: 50 + activeWindows.length * 20,
+        x: 10 + activeWindows.length * 20,
+        y: 10 + activeWindows.length * 20,
       },
       zIndex: zIndexCounter,
     };
