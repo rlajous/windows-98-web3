@@ -1,10 +1,11 @@
-import { NFT } from "@/types/NFT";
 import { useState } from "react";
 import { useAccount, useSignMessage } from "wagmi";
-import { WalletConnectedRequiredError } from "./errors/WalletConnectedRequiredError";
+
+import { NFT } from "@/types/NFT";
+
 import { MaxMintCategoriesError } from "./errors/MaxMintCategoriesError";
 import { MintError } from "./errors/MintError";
-import { ProjectInfo } from "fuul-sdk";
+import { WalletConnectedRequiredError } from "./errors/WalletConnectedRequiredError";
 
 export interface MintedNFTs {
   [key: number]: NFT;
@@ -13,7 +14,6 @@ export interface MintedNFTs {
 export const useNFTMinting = () => {
   const [mintedNFTs, setMintedNFTs] = useState<MintedNFTs>({});
   const [showReferralModal, setShowReferralModal] = useState<boolean>(false);
-  const [projectInfo, setProjectInfo] = useState<ProjectInfo | null>(null);
   const { address, isConnected } = useAccount();
   const { signMessageAsync } = useSignMessage();
 
@@ -36,7 +36,7 @@ export const useNFTMinting = () => {
 
       setMintedNFTs((prev) => ({
         ...prev,
-        [nft.id]: { ...nft, minted: (prev[nft.id]?.minted || 0) + 1 },
+        [nft.id]: { ...nft, minted: (prev[nft.id]?.minted || nft.minted) + 1 },
       }));
       setShowReferralModal(true);
     } catch (error) {
@@ -47,7 +47,6 @@ export const useNFTMinting = () => {
   return {
     mintedNFTs,
     showReferralModal,
-    projectInfo,
     address,
     isConnected,
     mintNFT,

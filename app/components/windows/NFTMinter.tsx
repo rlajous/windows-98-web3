@@ -64,7 +64,7 @@ export const NFTMinter = () => {
             <NFTCard
               key={nft.id}
               nft={nft}
-              mintedCount={mintedNFTs[nft.id]?.minted || 0}
+              mintedCount={mintedNFTs[nft.id]?.minted || nft.minted}
               onMint={() => handleMint(nft)}
             />
           ))}

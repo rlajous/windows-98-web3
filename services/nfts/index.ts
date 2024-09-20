@@ -30,7 +30,7 @@ const nfts: NFT[] = [
     name: "Notepad",
     category: "Application",
     editions: 200,
-    minted: 0,
+    minted: 10,
     icon: "/assets/notepad-2.png",
   },
   {
