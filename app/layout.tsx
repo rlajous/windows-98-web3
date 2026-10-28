@@ -15,9 +15,31 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const SITE_URL = "https://windows98.navarrolajous.com";
+const TITLE = "Web3 Windows 98 | Rodrigo Lajous";
+const DESCRIPTION = "Your favorite operating system, now on the blockchain.";
+/** Share image hosted on the author's portfolio, which also lists this project. */
+const OG_IMAGE = "https://navarrolajous.com/assets/windows98.gif";
+
 export const metadata: Metadata = {
-  title: "Web3 Windows 98",
-  description: "Your favorite operating system, now on the blockchain.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  authors: [{ name: "Rodrigo Lajous", url: "https://navarrolajous.com/projects/windows-98-web3" }],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: OG_IMAGE, alt: "Web3 Windows 98 desktop" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 export default function RootLayout({
